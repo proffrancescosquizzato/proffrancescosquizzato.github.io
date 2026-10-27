@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pagina non trovata | Prof. Francesco Squizzato</title>
+<meta name="description" content="La pagina richiesta non è disponibile.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/css/stile.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/index.html">Francesco Squizzato</a>
+    <nav class="nav" id="menu" aria-label="Navigazione principale">
+      <a href="/attivita-clinica.html">Attività clinica</a>
+      <a href="/ricerca.html">Ricerca</a>
+      <a href="/didattica.html">Attività didattica</a>
+      <a href="/curriculum.html">Curriculum</a>
+      <a class="btn" href="/index.html#prenota">Prenota una visita</a>
+    </nav>
+    <div class="mob">
+      <a class="btn" href="/index.html#prenota">Prenota</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="p-intesta errore" aria-labelledby="titolo">
+    <div class="wrap">
+      <p class="occhiello">Errore 404</p>
+      <h1 id="titolo">Pagina non trovata</h1>
+      <p class="lead">La pagina che cerchi non esiste o è stata spostata.</p>
+      <div class="azioni">
+        <a class="btn" href="/index.html">Torna alla home</a>
+        <a class="btn ghost" href="/attivita-clinica.html">Attività clinica</a>
+        <a class="btn ghost" href="/index.html#prenota">Prenota una visita</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="nome">Prof. Francesco Squizzato</div>
+      <p>Chirurgo vascolare ed endovascolare<br>Professore Associato, Università di Padova</p>
+      <p>Azienda Ospedale-Università Padova<br>Via Giustiniani 2, Padova<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Azienda+Ospedale+Universit%C3%A0+Padova+Via+Giustiniani+2+Padova" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+    </div>
+    <div>
+      <h4>Sezioni</h4>
+      <ul>
+        <li><a href="/attivita-clinica.html">Attività clinica</a></li>
+        <li><a href="/ricerca.html">Ricerca</a></li>
+        <li><a href="/didattica.html">Attività didattica</a></li>
+        <li><a href="/curriculum.html">Curriculum</a></li>
+        <li><a href="/index.html#prenota">Prenota una visita</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Profili professionali</h4>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/francesco-squizzato-15632120a/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://x.com/dr_fsquizzato" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://www.unipd.it/contatti/francesco.squizzato" target="_blank" rel="noopener">Università di Padova</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Pubblicazioni</h4>
+      <ul>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Squizzato+F%5BAuthor%5D" target="_blank" rel="noopener">PubMed</a></li>
+        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=56786385000" target="_blank" rel="noopener">Scopus</a></li>
+        <li><a href="https://orcid.org/0000-0001-9327-2934" target="_blank" rel="noopener">ORCID</a></li>
+      </ul>
+    </div>
+    <p class="legale">Le informazioni contenute in questo sito hanno finalità esclusivamente informative e non sostituiscono in alcun modo la visita medica. <a href="/privacy.html">Privacy</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.menu-btn'), m=document.getElementById('menu');
+  if(!b||!m) return;
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('aperto');
+    b.setAttribute('aria-expanded',o?'true':'false');
+    b.textContent=o?'Chiudi':'Menu';
+  });
+  m.addEventListener('click',function(e){ if(e.target.tagName==='A'){ m.classList.remove('aperto'); b.setAttribute('aria-expanded','false'); b.textContent='Menu'; } });
+})();
+</script>
+</body>
+</html>
